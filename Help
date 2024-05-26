@@ -1,0 +1,21 @@
+[shproc] Process[pid=22630, hasExited=false]
+
+Exception occurred while executing 'grant':
+java.lang.SecurityException: grantRuntimePermission: Neither user 2000 nor current process has android.permission.GRANT_RUNTIME_PERMISSIONS.
+	at android.app.ContextImpl.enforce(ContextImpl.java:2212)
+	at android.app.ContextImpl.enforceCallingOrSelfPermission(ContextImpl.java:2240)
+	at com.android.server.pm.permission.PermissionManagerService.grantRuntimePermissionInternal(PermissionManagerService.java:1504)
+	at com.android.server.pm.permission.PermissionManagerService.grantRuntimePermission(PermissionManagerService.java:1486)
+	at android.permission.PermissionManager.grantRuntimePermission(PermissionManager.java:378)
+	at com.android.server.pm.PackageManagerShellCommand.runGrantRevokePermission(PackageManagerShellCommand.java:2419)
+	at com.android.server.pm.PackageManagerShellCommand.onCommand(PackageManagerShellCommand.java:260)
+	at com.android.modules.utils.BasicShellCommandHandler.exec(BasicShellCommandHandler.java:97)
+	at android.os.ShellCommand.exec(ShellCommand.java:38)
+	at com.android.server.pm.PackageManagerService.onShellCommand(PackageManagerService.java:25979)
+	at android.os.Binder.shellCommand(Binder.java:970)
+	at android.os.Binder.onTransact(Binder.java:854)
+	at android.content.pm.IPackageManager$Stub.onTransact(IPackageManager.java:4818)
+	at com.android.server.pm.PackageManagerService.onTransact(PackageManagerService.java:9013)
+	at android.os.Binder.execTransactInternal(Binder.java:1226)
+	at android.os.Binder.execTransact(Binder.java:1163)
+[shproc] Process[pid=22630, hasExited=true, exitcode=0]
